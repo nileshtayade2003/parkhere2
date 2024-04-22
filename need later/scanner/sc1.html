@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Scanner</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/instascan@2"></script>
+    <div id="scanner"></div>
+    
+    <script>
+        const scanner = new Instascan.Scanner({ video: document.getElementById('scanner') });
+        
+        scanner.addListener('scan', function(content) {
+            console.log('Scanned:', content);
+            // You can handle the scanned content here, for example:
+            // alert('Scanned: ' + content);
+        });
+        
+    Instascan.Camera.getCameras()
+        .then(cameras => {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);
+            } else {
+                console.error('No cameras found.');
+            }
+        })
+        .catch(err => {
+            console.error('Error accessing cameras:', err);
+        });
+</script>
+</body>
+</html>

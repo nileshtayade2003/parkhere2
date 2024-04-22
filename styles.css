@@ -1,0 +1,220 @@
+/******************** header style****************************** */
+header {
+    background-color: #FFFFFF;
+    color: #070707;
+    padding: 15px 5%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+   
+    box-shadow: 0px 10px 25px #00000085;
+}
+
+header h1{
+   margin-left: 20%;
+}
+
+#logo{
+    display: flex;
+}
+
+#logo img{
+    width: 50px;
+    height: 50px;
+    padding-top:10px ;
+}
+
+/******************** navbar style****************************** */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    padding-top: 16px;
+    font-size: 19px;
+    gap: 15px;
+}
+
+nav a {
+    color: #3C404A;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #EEEFF1;
+}
+
+
+/******************** footer style****************************** */
+footer {
+    background-color: #3C404A;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+/******************** index page style****************************** */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+main {
+    padding: 20px;
+    margin: 5%;
+}
+
+
+
+/******************** admin-login style****************************** */
+
+form {
+    max-width: 400px;
+    background-color: #eeeff1;
+    border: 1px solid #3c404a59;
+    border-radius: 15px;
+    color: #3c404a;
+    padding: 25px;
+    margin: 50px auto;
+}
+
+form h2{
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+/******************** tclogin style****************************** */
+    /* using same admin styles */
+
+/******************** user-register style****************************** */
+
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/******************** userlogin style****************************** */
+.register-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    color: #0056b3;
+}
+
+
+/******************** responsive and hamburger menu style****************************** */
+
+/* hamberger style */
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+}
+
+#mobile-nav a {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#mobile-nav a:hover {
+    background-color: #555;
+}
+
+
+@media only screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+    }
+
+    #mobile-nav {
+        display: flex;
+    }
+
+    
+}

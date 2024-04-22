@@ -1,0 +1,20 @@
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<div id="targetDiv" style="width: 500px; background-color:aliceblue; border:2px solid grey; text-align: center; border-radius: 15px;">
+    <h1>nilesh tayade</h1>
+    <img src="img.svg" alt="">
+  </div>
+  
+  <button onclick="saveAsImage()">Save as Image</button>
+  
+  
+  <script>
+    function saveAsImage() {
+      html2canvas(document.getElementById('targetDiv')).then(function(canvas) {
+        var link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'div_image.png';
+        link.click();
+      });
+    }
+  </script>
+  
